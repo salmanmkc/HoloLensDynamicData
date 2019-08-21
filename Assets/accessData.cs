@@ -31,6 +31,7 @@ public class accessData : MonoBehaviour
                 var content = await response.Content.ReadAsStringAsync();
                 var parseddata = JsonConvert.DeserializeObject<parseData.Rootobject>(content);
                 string temperature = parseddata.data.asset.readings[0].values[0].values.ToString();
+                string humidity = parseddata.data.asset.readings[1].values[0].values.ToString();
                 //string test = parseddata.data.assets[0].type;
                 string toBreakpoint = "";
             }

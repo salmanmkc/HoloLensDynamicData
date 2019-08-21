@@ -38,10 +38,11 @@ public class accessData : MonoBehaviour
                 float humidity = parseddata.data.asset.readings[1].values[0].values[0];
                 //string test = parseddata.data.assets[0].type;
                 string toBreakpoint = "";
-                gameObject.GetComponent<accessData>().temperatureVal = temperature;
-                gameObject.GetComponent<accessData>().humidityVal = humidity;
-                temperatureText.text = temperatureVal.ToString();
-                humidityText.text = humidityVal.ToString();
+
+                //gameObject.GetComponent<Text>().temperatureVal = temperature;
+                //gameObject.GetComponent<accessData>().humidityVal = humidity;
+                temperatureText.text = temperature.ToString();
+                humidityText.text = humidity.ToString();
                
 
 

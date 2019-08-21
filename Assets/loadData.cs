@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Vuforia;
 
 public class loadData : MonoBehaviour, ITrackableEventHandler
@@ -10,6 +11,7 @@ public class loadData : MonoBehaviour, ITrackableEventHandler
     protected TrackableBehaviour mTrackableBehaviour;
     protected TrackableBehaviour.Status m_PreviousStatus;
     protected TrackableBehaviour.Status m_NewStatus;
+
 
     #endregion // PROTECTED_MEMBER_VARIABLES
 
@@ -24,8 +26,8 @@ public class loadData : MonoBehaviour, ITrackableEventHandler
 
     protected virtual void OnDestroy()
     {
-        if (mTrackableBehaviour)
-            mTrackableBehaviour.UnregisterTrackableEventHandler(this);
+        //if (mTrackableBehaviour)
+        //    mTrackableBehaviour.UnregisterTrackableEventHandler(this);
     }
 
     #endregion // UNITY_MONOBEHAVIOUR_METHODS
@@ -73,7 +75,8 @@ public class loadData : MonoBehaviour, ITrackableEventHandler
 
     protected virtual void OnTrackingFound()
     {
-        
+        accessData aD = new accessData();
+        aD.getResponse(mTrackableBehaviour.TrackableName);
     }
 
 

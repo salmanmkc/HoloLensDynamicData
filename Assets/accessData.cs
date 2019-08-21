@@ -18,14 +18,14 @@ public class accessData : MonoBehaviour
 
     public void Start()
     {
-        getResponse();
+     
     }
-    async void getResponse()
+    public async void getResponse(string name)
     {
         try
         {
             //string name = gameObject.GetComponent<Trackable>().Name;
-            string name = "e1ebb451-40c4-4e3b-980a-f495695a3855";
+            //string name = "e1ebb451-40c4-4e3b-980a-f495695a3855";
             //string example = "{'Username': 'myusername','Password':'pass'}"; 
             string json = @"{""operationName"":null,""variables"":{},""query"":""{\n asset(uuid: \""" + name + @"\"") {\n    readings(filter: {types: [\""temperature\"", \""humidity\""]}) {\n      type {\n        name\n      }\n      values(filter: {limit: 1}) {\n        values\n      }\n    }\n  }\n}\n""}";
             using (var client = new HttpClient())
@@ -42,6 +42,7 @@ public class accessData : MonoBehaviour
                 gameObject.GetComponent<accessData>().humidityVal = humidity;
                 temperatureText.text = temperatureVal.ToString();
                 humidityText.text = humidityVal.ToString();
+               
 
 
                 

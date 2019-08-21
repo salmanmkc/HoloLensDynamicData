@@ -30,6 +30,7 @@ public class accessData : MonoBehaviour
                 var response = await client.PostAsync("https://apidae.stage.rco-bozal.uk/graphql", new StringContent(json, Encoding.UTF8, "application/json"));
                 var content = await response.Content.ReadAsStringAsync();
                 var parseddata = JsonConvert.DeserializeObject<parseData.Rootobject>(content);
+                string temperature = parseddata.data.asset.readings[0].values[0].values.ToString();
                 //string test = parseddata.data.assets[0].type;
                 string toBreakpoint = "";
             }

@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+using Vuforia;
 
 public class accessData : MonoBehaviour
 {
@@ -22,8 +24,10 @@ public class accessData : MonoBehaviour
     {
         try
         {
+            //string name = gameObject.GetComponent<Trackable>().Name;
+            string name = "e1ebb451-40c4-4e3b-980a-f495695a3855";
             //string example = "{'Username': 'myusername','Password':'pass'}"; 
-            string json = @"{""operationName"":null,""variables"":{},""query"":""{\n asset(uuid: \""3c8ca712-6cf8-4ed1-94bf-4cfc1e89b43e\"") {\n    readings(filter: {types: [\""temperature\"", \""humidity\""]}) {\n      type {\n        name\n      }\n      values(filter: {limit: 1}) {\n        values\n      }\n    }\n  }\n}\n""}";
+            string json = @"{""operationName"":null,""variables"":{},""query"":""{\n asset(uuid: \""" + name + @"\"") {\n    readings(filter: {types: [\""temperature\"", \""humidity\""]}) {\n      type {\n        name\n      }\n      values(filter: {limit: 1}) {\n        values\n      }\n    }\n  }\n}\n""}";
             using (var client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NjY4MjAzMTksInVzZXJuYW1lIjoiYWRtaW4ifQ.FMPYbA4s_jghL686qIPEPRliMLnUIJxeLeuVQ763NDk");
@@ -38,6 +42,9 @@ public class accessData : MonoBehaviour
                 gameObject.GetComponent<accessData>().humidityVal = humidity;
                 temperatureText.text = temperatureVal.ToString();
                 humidityText.text = humidityVal.ToString();
+
+
+                
             }
 
             //var request = "https://apidae.stage.rco-bozal.uk/graphql";
@@ -45,9 +52,9 @@ public class accessData : MonoBehaviour
             //var response = await client.GetAsync(request);
 
         }
-        catch
+        catch(Exception e)
         {
-            throw new System.Exception("some error");
+            throw e;
         }
 
 

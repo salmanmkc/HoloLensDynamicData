@@ -39,6 +39,8 @@ public class accessData : MonoBehaviour
                 string toBreakpoint = "";
                 gameObject.GetComponent<accessData>().temperatureVal = temperature;
                 gameObject.GetComponent<accessData>().humidityVal = humidity;
+                temperatureText.text = temperatureVal.ToString();
+                humidityText.text = humidityVal.ToString();
             }
 
             //var request = "https://apidae.stage.rco-bozal.uk/graphql";

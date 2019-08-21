@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class accessData : MonoBehaviour
 {
     //HttpClient client = new HttpClient();
     public float temperatureVal;
+    public Text temperatureText;
     public float humidityVal;
+    public Text humidityText;
 
     public void Start()
     {

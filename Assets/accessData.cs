@@ -9,7 +9,8 @@ using UnityEngine;
 public class accessData : MonoBehaviour
 {
     //HttpClient client = new HttpClient();
-
+    public float temperatureVal;
+    public float humidityVal;
 
     public void Start()
     {
@@ -34,6 +35,8 @@ public class accessData : MonoBehaviour
                 float humidity = parseddata.data.asset.readings[1].values[0].values[0];
                 //string test = parseddata.data.assets[0].type;
                 string toBreakpoint = "";
+                gameObject.GetComponent<accessData>().temperatureVal = temperature;
+                gameObject.GetComponent<accessData>().humidityVal = humidity;
             }
 
             //var request = "https://apidae.stage.rco-bozal.uk/graphql";

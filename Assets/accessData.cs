@@ -23,9 +23,6 @@ public class accessData : MonoBehaviour
         try
         {
             //string example = "{'Username': 'myusername','Password':'pass'}"; 
-            //string json = "{\"operationName\":null,\"variables\":{},\"query\":\"{\\n  assets {\\n    uuid\\n    type\\n  }\\n}\\n\"}";
-            //string json = "{\"operationName\":null,\"variables\":{},\"query\":\"{\\n asset(uuid: \"3c8ca712-6cf8-4ed1-94bf-4cfc1e89b43e\") {\\n    readings(filter: {types: [\"temperature\", \"humidity\"]}) {\\n      type {\\n        name\\n      }\\n      values(filter: {limit: 1}) {\\n        values\\n      }\\n    }\\n  }\\n}\\n\"}";
-            //string json = "{\"operationName\":null,\"variables\":{},\"query\":\"{\\n asset(uuid: \"3c8ca712-6cf8-4ed1-94bf-4cfc1e89b43e\") {\\n    readings(filter: {types: [\"temperature\", \"humidity\"]}) {\\n      type {\\n        name\\n      }\\n      values(filter: {limit: 1}) {\\n        values\\n      }\\n    }\\n  }\\n}\\n\"}";
             string json = @"{""operationName"":null,""variables"":{},""query"":""{\n asset(uuid: \""3c8ca712-6cf8-4ed1-94bf-4cfc1e89b43e\"") {\n    readings(filter: {types: [\""temperature\"", \""humidity\""]}) {\n      type {\n        name\n      }\n      values(filter: {limit: 1}) {\n        values\n      }\n    }\n  }\n}\n""}";
             using (var client = new HttpClient())
             {

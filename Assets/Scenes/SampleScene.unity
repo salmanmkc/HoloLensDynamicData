@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 361409737}
   - component: {fileID: 361409736}
   m_Layer: 5
-  m_Name: infoText
+  m_Name: valText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -713,7 +713,7 @@ GameObject:
   - component: {fileID: 1251491794}
   - component: {fileID: 1251491793}
   m_Layer: 5
-  m_Name: valText
+  m_Name: infoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -760,10 +760,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -771,7 +771,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Temperature
 --- !u!222 &1251491794
 CanvasRenderer:
   m_ObjectHideFlags: 0

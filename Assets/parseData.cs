@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class parsingData : MonoBehaviour
+public class parseData : MonoBehaviour
 {
 
     public class Rootobject

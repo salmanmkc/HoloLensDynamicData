@@ -6,7 +6,7 @@ using Vuforia;
 
 public class loadData : MonoBehaviour, ITrackableEventHandler
 {
-    public accessData a2;
+    
 
     #region PROTECTED_MEMBER_VARIABLES
 
@@ -79,7 +79,7 @@ public class loadData : MonoBehaviour, ITrackableEventHandler
     protected virtual void OnTrackingFound()
     {
         //accessData a3;
-        a2.getResponse(mTrackableBehaviour.TrackableName);
+        GetComponent<accessData>().getResponse(mTrackableBehaviour.TrackableName);
         
     }
 

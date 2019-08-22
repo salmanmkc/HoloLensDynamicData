@@ -1074,3 +1074,106 @@ PrefabInstance:
       objectReference: {fileID: 527661900}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63883748a2d2ed5418498bfaae5d6eed, type: 3}
+--- !u!1001 &8927620645727974380
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 883562869273677161, guid: 2c4ba4f11e24c9f40a0e4672a86acba4,
+        type: 3}
+      propertyPath: m_Name
+      value: GameObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763465747847855261, guid: 2c4ba4f11e24c9f40a0e4672a86acba4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.70155776
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763465747847855261, guid: 2c4ba4f11e24c9f40a0e4672a86acba4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.504836
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763465747847855261, guid: 2c4ba4f11e24c9f40a0e4672a86acba4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.0014924
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763465747847855261, guid: 2c4ba4f11e24c9f40a0e4672a86acba4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763465747847855261, guid: 2c4ba4f11e24c9f40a0e4672a86acba4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763465747847855261, guid: 2c4ba4f11e24c9f40a0e4672a86acba4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763465747847855261, guid: 2c4ba4f11e24c9f40a0e4672a86acba4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763465747847855261, guid: 2c4ba4f11e24c9f40a0e4672a86acba4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763465747847855261, guid: 2c4ba4f11e24c9f40a0e4672a86acba4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763465747847855261, guid: 2c4ba4f11e24c9f40a0e4672a86acba4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3763465747847855261, guid: 2c4ba4f11e24c9f40a0e4672a86acba4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132791010438669051, guid: 2c4ba4f11e24c9f40a0e4672a86acba4,
+        type: 3}
+      propertyPath: temperatureText
+      value: 
+      objectReference: {fileID: 8927620645727974382}
+    - target: {fileID: 2132791010438669051, guid: 2c4ba4f11e24c9f40a0e4672a86acba4,
+        type: 3}
+      propertyPath: humidityText
+      value: 
+      objectReference: {fileID: 8927620645727974381}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2c4ba4f11e24c9f40a0e4672a86acba4, type: 3}
+--- !u!114 &8927620645727974381 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6812666963414106454, guid: 2c4ba4f11e24c9f40a0e4672a86acba4,
+    type: 3}
+  m_PrefabInstance: {fileID: 8927620645727974380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8927620645727974382 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6812666964250383727, guid: 2c4ba4f11e24c9f40a0e4672a86acba4,
+    type: 3}
+  m_PrefabInstance: {fileID: 8927620645727974380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

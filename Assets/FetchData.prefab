@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8139289742881007085}
   - component: {fileID: 8139289742881007083}
   - component: {fileID: 8139289742881007082}
+  - component: {fileID: 8024125697390328725}
   m_Layer: 0
   m_Name: FetchData
   m_TagString: Untagged
@@ -60,3 +61,16 @@ MonoBehaviour:
   temperatureText: {fileID: 0}
   humidityVal: 0
   humidityText: {fileID: 0}
+--- !u!114 &8024125697390328725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8139289742881007084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4949d3235080ba4a9f1454c8f9fa64c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a2: {fileID: 0}

@@ -10,8 +10,9 @@ public class createPrefabs : MonoBehaviour
     public GameObject prefab;
     private StateManager stateManager;
     string datasetname = "ArIot";
-    public GameObject canvas;
-    public GameObject fetchdata;
+    //public GameObject canvas;
+    //public GameObject fetchdata;
+    public GameObject objects;
 
     //public DefaultTrackableEventHandler defaultTrackableEventHandler;
     // Start is called before the first frame update
@@ -51,15 +52,30 @@ public class createPrefabs : MonoBehaviour
         {
             if (trackableBehaviour is ImageTargetBehaviour && trackableBehaviour.isActiveAndEnabled)
             {
-                GameObject canvas1 = Instantiate(canvas);
-                GameObject fetchdata1 = Instantiate(fetchdata);
+                //GameObject canvas1 = Instantiate(canvas);
+                //GameObject fetchdata1 = Instantiate(fetchdata);
+                GameObject objects1 = Instantiate(objects);
+                GameObject fetchDataChild = objects1.transform.Find("FetchData").gameObject;
+                GameObject canvasChild = objects1.transform.Find("Canvas").gameObject;
+
                 //DefaultTrackableEventHandler defaultTrackableEventHandler1 = Instantiate(defaultTrackableEventHandler);
                 ImageTargetBehaviour imageTargetBehaviour = (ImageTargetBehaviour)trackableBehaviour;
                 Debug.Log("TrackableName: " + imageTargetBehaviour.TrackableName);
                 
                 imageTargetBehaviour.gameObject.AddComponent<DefaultTrackableEventHandler>();
-                canvas1.transform.parent = imageTargetBehaviour.transform;
-                fetchdata1.transform.parent = imageTargetBehaviour.transform;
+                imageTargetBehaviour.gameObject.AddComponent<loadData>();
+                imageTargetBehaviour.gameObject.AddComponent<TurnOffBehaviour>();
+
+                //imageTargetBehaviour.gameObject.AddComponent<accessData>();
+
+                //canvas1.transform.parent = imageTargetBehaviour.transform;
+                //fetchdata1.transform.parent = imageTargetBehaviour.transform;
+                fetchDataChild.transform.parent = imageTargetBehaviour.transform;
+                canvasChild.transform.parent = imageTargetBehaviour.transform;
+
+
+
+
 
             }
         }

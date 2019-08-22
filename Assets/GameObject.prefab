@@ -109,7 +109,8 @@ PrefabInstance:
       propertyPath: humidityText
       value: 
       objectReference: {fileID: 3323635585784202471}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8024125697390328725, guid: dbb9dd1baaff43a4e8c8d7325d2933fe, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dbb9dd1baaff43a4e8c8d7325d2933fe, type: 3}
 --- !u!4 &7858124293308311373 stripped
 Transform:

@@ -57,7 +57,6 @@ public class createPrefabs : MonoBehaviour
                 GameObject objects1 = Instantiate(objects);
                 GameObject fetchDataChild = objects1.transform.Find("FetchData").gameObject;
                 GameObject canvasChild = objects1.transform.Find("Canvas").gameObject;
-
                 //DefaultTrackableEventHandler defaultTrackableEventHandler1 = Instantiate(defaultTrackableEventHandler);
                 ImageTargetBehaviour imageTargetBehaviour = (ImageTargetBehaviour)trackableBehaviour;
                 Debug.Log("TrackableName: " + imageTargetBehaviour.TrackableName);
@@ -65,6 +64,7 @@ public class createPrefabs : MonoBehaviour
                 imageTargetBehaviour.gameObject.AddComponent<DefaultTrackableEventHandler>();
                 imageTargetBehaviour.gameObject.AddComponent<loadData>();
                 imageTargetBehaviour.gameObject.AddComponent<TurnOffBehaviour>();
+                
 
                 //imageTargetBehaviour.gameObject.AddComponent<accessData>();
 
@@ -72,8 +72,9 @@ public class createPrefabs : MonoBehaviour
                 //fetchdata1.transform.parent = imageTargetBehaviour.transform;
                 fetchDataChild.transform.parent = imageTargetBehaviour.transform;
                 canvasChild.transform.parent = imageTargetBehaviour.transform;
+                canvasChild.gameObject.transform.localScale = new Vector3(0.002f, 0.002f, 0.002f);
 
-
+                objtracker.Start();
 
 
 

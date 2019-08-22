@@ -79,7 +79,8 @@ public class loadData : MonoBehaviour, ITrackableEventHandler
     protected virtual void OnTrackingFound()
     {
         //accessData a3;
-        GetComponent<accessData>().getResponse(mTrackableBehaviour.TrackableName);
+        GetComponentInChildren<accessData>().getResponse(mTrackableBehaviour.TrackableName);
+        
         
     }
 

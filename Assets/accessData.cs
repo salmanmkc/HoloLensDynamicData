@@ -11,16 +11,17 @@ using Vuforia;
 public class accessData : MonoBehaviour
 {
     //HttpClient client = new HttpClient();
-    public float temperatureVal;
-    public Text temperatureText;
-    public float humidityVal;
-    public Text humidityText;
+    public static float temperatureVal;
+    //public static Text temperatureText;
+    public static float humidityVal;
+    //public static Text humidityText;
+   
 
     public void Start()
     {
      
     }
-    public async void getResponse(string name)
+    public static async void getResponse(string name)
     {
         try
         {
@@ -39,10 +40,9 @@ public class accessData : MonoBehaviour
                 //string test = parseddata.data.assets[0].type;
                 string toBreakpoint = "";
 
-                //gameObject.GetComponent<Text>().temperatureVal = temperature;
-                //gameObject.GetComponent<accessData>().humidityVal = humidity;
-                temperatureText.text = temperature.ToString();
-                humidityText.text = humidity.ToString();
+                
+                temperatureVal = temperature;
+                humidityVal = humidity;
                
 
 

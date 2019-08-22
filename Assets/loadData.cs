@@ -75,8 +75,9 @@ public class loadData : MonoBehaviour, ITrackableEventHandler
 
     protected virtual void OnTrackingFound()
     {
-        accessData aD = new accessData();
-        aD.getResponse(mTrackableBehaviour.TrackableName);
+        accessData.getResponse(mTrackableBehaviour.TrackableName);
+        gameObject.GetComponent<accessData>().temperatureVal = temperature;
+        gameObject.GetComponent<accessData>().humidityVal = humidity;
     }
 
 

@@ -15,6 +15,7 @@ public class accessData : MonoBehaviour
     public Text temperatureText;
     public float humidityVal;
     public Text humidityText;
+  
 
     public void Start()
     {
@@ -44,7 +45,7 @@ public class accessData : MonoBehaviour
                 temperatureText.text = temperature.ToString();
                 humidityText.text = humidity.ToString();
                
-
+                
 
                 
             }

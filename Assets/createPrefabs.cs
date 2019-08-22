@@ -11,6 +11,8 @@ public class createPrefabs : MonoBehaviour
     private StateManager stateManager;
     string datasetname = "ArIot";
     public GameObject canvas;
+
+    //public DefaultTrackableEventHandler defaultTrackableEventHandler;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,8 +51,10 @@ public class createPrefabs : MonoBehaviour
             if (trackableBehaviour is ImageTargetBehaviour && trackableBehaviour.isActiveAndEnabled)
             {
                 GameObject canvas1 = Instantiate(canvas);
+                //DefaultTrackableEventHandler defaultTrackableEventHandler1 = Instantiate(defaultTrackableEventHandler);
                 ImageTargetBehaviour imageTargetBehaviour = (ImageTargetBehaviour)trackableBehaviour;
                 Debug.Log("TrackableName: " + imageTargetBehaviour.TrackableName);
+                
                 imageTargetBehaviour.gameObject.AddComponent<DefaultTrackableEventHandler>();
                 canvas1.transform.parent = imageTargetBehaviour.transform;
             }

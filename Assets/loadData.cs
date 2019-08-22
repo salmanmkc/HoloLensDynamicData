@@ -50,6 +50,7 @@ public class loadData : MonoBehaviour, ITrackableEventHandler
         Debug.Log("Trackable " + mTrackableBehaviour.TrackableName +
                   " " + mTrackableBehaviour.CurrentStatus +
                   " -- " + mTrackableBehaviour.CurrentStatusInfo);
+        
 
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
@@ -77,6 +78,7 @@ public class loadData : MonoBehaviour, ITrackableEventHandler
 
     protected virtual void OnTrackingFound()
     {
+        //accessData a3;
         a2.getResponse(mTrackableBehaviour.TrackableName);
         
     }

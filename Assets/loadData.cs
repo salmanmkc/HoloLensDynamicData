@@ -6,6 +6,8 @@ using Vuforia;
 
 public class loadData : MonoBehaviour, ITrackableEventHandler
 {
+    public accessData a2;
+
     #region PROTECTED_MEMBER_VARIABLES
 
     protected TrackableBehaviour mTrackableBehaviour;
@@ -75,9 +77,8 @@ public class loadData : MonoBehaviour, ITrackableEventHandler
 
     protected virtual void OnTrackingFound()
     {
-        accessData.getResponse(mTrackableBehaviour.TrackableName);
-        gameObject.GetComponent<accessData>().temperatureVal = temperature;
-        gameObject.GetComponent<accessData>().humidityVal = humidity;
+        a2.getResponse(mTrackableBehaviour.TrackableName);
+        
     }
 
 

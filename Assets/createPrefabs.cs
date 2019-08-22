@@ -10,6 +10,7 @@ public class createPrefabs : MonoBehaviour
     public GameObject prefab;
     private StateManager stateManager;
     string datasetname = "ArIot";
+    public GameObject canvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,36 +42,18 @@ public class createPrefabs : MonoBehaviour
             Debug.Log("No dataset with name: " + datasetname);
             return;
         }
-      
+
         // find the gameobject created by Vuforia for the vumark that has just been activated
         foreach (TrackableBehaviour trackableBehaviour in stateManager.GetTrackableBehaviours())
         {
-            if (trackableBehaviour is VuMarkBehaviour && trackableBehaviour.isActiveAndEnabled)
+            if (trackableBehaviour is ImageTargetBehaviour && trackableBehaviour.isActiveAndEnabled)
             {
+                GameObject canvas1 = Instantiate(canvas);
                 ImageTargetBehaviour imageTargetBehaviour = (ImageTargetBehaviour)trackableBehaviour;
                 Debug.Log("TrackableName: " + imageTargetBehaviour.TrackableName);
                 imageTargetBehaviour.gameObject.AddComponent<DefaultTrackableEventHandler>();
+                canvas1.transform.parent = imageTargetBehaviour.transform;
             }
-        }// must be stopped when switching datasets
+        }
     }
-
-
-    //GameObject prefab1 = Instantiate(prefab);
-    //prefab1.GetComponent<ImageTargetBehaviour>().ImageTarget;
-    //    IEnumerable<TrackableBehaviour> tbs = TrackerManager.Instance.GetStateManager().GetTrackableBehaviours();
-    //    foreach(var tb in tbs)
-    //    {
-    //        GameObject prefab2 = Instantiate(prefab);
-    //        //prefab2.GetComponent<ImageTargetBehaviour>().ImageTarget = tb.TrackableName;
-    //    }
-
-    //        foreach(db in getNu)
-    //    {
-    //        GameObject prefab = Instantiate(prefab);
-    //        prefab.GetComponent<ImageTargetBehaviour>().ImageTarget = db.
-    //    }
-    //}
-
-    // Update is called once per frame
-
 }

@@ -59,6 +59,8 @@ public class createPrefabs : MonoBehaviour
                 
                 imageTargetBehaviour.gameObject.AddComponent<DefaultTrackableEventHandler>();
                 canvas1.transform.parent = imageTargetBehaviour.transform;
+                fetchdata1.transform.parent = imageTargetBehaviour.transform;
+
             }
         }
     }

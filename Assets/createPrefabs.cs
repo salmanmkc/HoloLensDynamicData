@@ -73,6 +73,7 @@ public class createPrefabs : MonoBehaviour
                 fetchDataChild.transform.parent = imageTargetBehaviour.transform;
                 canvasChild.transform.parent = imageTargetBehaviour.transform;
                 canvasChild.gameObject.transform.localScale = new Vector3(0.002f, 0.002f, 0.002f);
+                Destroy(objects1);
 
                 objtracker.Start();
 

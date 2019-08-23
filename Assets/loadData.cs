@@ -13,6 +13,7 @@ public class loadData : MonoBehaviour, ITrackableEventHandler
     protected TrackableBehaviour mTrackableBehaviour;
     protected TrackableBehaviour.Status m_PreviousStatus;
     protected TrackableBehaviour.Status m_NewStatus;
+    private int count = 0;
 
 
     #endregion // PROTECTED_MEMBER_VARIABLES
@@ -79,7 +80,12 @@ public class loadData : MonoBehaviour, ITrackableEventHandler
     protected virtual void OnTrackingFound()
     {
         //accessData a3;
+        count++;
         GetComponentInChildren<accessData>().getResponse(mTrackableBehaviour.TrackableName);
+        if(count > 1)
+        {
+            TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+        }
         
         
     }

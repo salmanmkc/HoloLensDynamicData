@@ -80,12 +80,12 @@ public class loadData : MonoBehaviour, ITrackableEventHandler
     protected virtual void OnTrackingFound()
     {
         //accessData a3;
-        count++;
+        //count++;
         GetComponentInChildren<accessData>().getResponse(mTrackableBehaviour.TrackableName);
-        if(count > 1)
-        {
-            TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
-        }
+        //if(count > 1)
+        //{
+        //    TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+        //}
         
         
     }

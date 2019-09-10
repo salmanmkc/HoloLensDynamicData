@@ -20,7 +20,7 @@ HoloLensARProject
 * see [Vurforia](https://developer.vuforia.com/)
 
 ## License 
-* see [LICENSE](https://github.com/username/sw-name/blob/master/LICENSE.md) file
+* see [LICENSE](https://github.com/salmanmkc/HoloLensARProject/blob/master/LICENSE) file
 
 ## Version 
 * Version 1.0

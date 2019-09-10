@@ -10,7 +10,6 @@ using Vuforia;
 
 public class accessData : MonoBehaviour
 {
-    //HttpClient client = new HttpClient();
     public float temperatureVal;
     public Text temperatureText;
     public float humidityVal;
@@ -25,9 +24,7 @@ public class accessData : MonoBehaviour
     {
         try
         {
-            //string name = gameObject.GetComponent<Trackable>().Name;
-            //string name = "e1ebb451-40c4-4e3b-980a-f495695a3855";
-            //string example = "{'Username': 'myusername','Password':'pass'}"; 
+          
             string json = @"{""operationName"":null,""variables"":{},""query"":""{\n asset(uuid: \""" + name + @"\"") {\n    readings(filter: {types: [\""temperature\"", \""humidity\""]}) {\n      type {\n        name\n      }\n      values(filter: {limit: 1}) {\n        values\n      }\n    }\n  }\n}\n""}";
             using (var client = new HttpClient())
             {
@@ -39,21 +36,12 @@ public class accessData : MonoBehaviour
                 float humidity = parseddata.data.asset.readings[1].values[0].values[0];
                 //string test = parseddata.data.assets[0].type;
                 string toBreakpoint = "";
-                //Button txt = transform.Find("temperatureButton").GetComponent<Button>();
                 temperatureVal = temperature;
                 humidityVal = humidity;
                 temperatureText.text = temperature.ToString();
                 humidityText.text = humidity.ToString();
-               
-                
-
-                
+              
             }
-
-            //var request = "https://apidae.stage.rco-bozal.uk/graphql";
-            //var response = await client.GetAsync(request);
-            //var response = await client.GetAsync(request);
-
         }
         catch(Exception e)
         {

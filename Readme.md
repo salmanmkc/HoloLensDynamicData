@@ -14,8 +14,9 @@ HoloLensARProject
 1) $ git clone https://github.com/salmanmkc/HoloLensARProject.git
 2) Set up your database for Vuforia and link it to the project
 3) Open the project in Unity
-4) Edit the Mono cs files so that it deserialises your data from your API
-5) Parse your data and modify any lickages to the Unity project
+4) Modify any UI elements to fit your project
+5) Edit the Mono cs files so that it deserialises your data from your API
+6) Parse your data and modify any links to the Unity project
 
 
 

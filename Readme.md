@@ -16,8 +16,7 @@ HoloLensARProject
 3) Open the project in Unity
 4) Edit the Mono cs files so that it deserialises your data from your API
 5) Parse your data and modify any lickages to the Unity project
-...
-```
+
 
 
 ### Third party libraries

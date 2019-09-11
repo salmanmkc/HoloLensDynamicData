@@ -1,9 +1,9 @@
 This can be compilled for the HoloLens, Windows, or Android
 On the 23.08.19 and prior I would have to manually move DLL files from the x64 compiled output for the HoloLens solution from Unity and move them into the x86 folder for it to run, which was a bug with Unity at the time. It may not be an issue anymore.
 
-HoloLensARProject
+HoloLensDynamicData
 ======
-**HoloLensARProject** was made to dynamically load data into 3D space, AR, using the HoloLens and/or mobile phones/tablet devices. It does deos a POST Request to the database in at run time when you scan an obkect, and dynamically loads that data. Based on your database of images you have on Vuforia I have contructed it so that it will generate image trackers and image targets per image in your Vurforia database.
+I made **HoloLensDynamicData** to dynamically load data into 3D space with AR, using the HoloLens and/or mobile phones/tablet devices. It does a POST Request to the database at run time when you scan an object, and dynamically loads that data. Based on your database of images you have on Vuforia I have constructed it so that it will generate image trackers and image targets per image in your Vurforia database.
 
 #### Video Demonstration
 [![Video Demonstration](https://img.youtube.com/vi/HiRQvAdTFec/0.jpg)](https://www.youtube.com/watch?v=HiRQvAdTFec)

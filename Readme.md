@@ -1,4 +1,4 @@
-This can be compilled for the HoloLens, Windows, or Android
+This can be compilled for the HoloLens, Windows, or Android.
 On the 23.08.19 and prior I would have to manually move DLL files from the x64 compiled output for the HoloLens solution from Unity and move them into the x86 folder for it to run, which was a bug with Unity at the time. It may not be an issue anymore.
 
 HoloLensDynamicData

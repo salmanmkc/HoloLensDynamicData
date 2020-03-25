@@ -16,7 +16,7 @@ I made **HoloLensDynamicData** to dynamically load data into 3D space with AR, u
 3) Open the project in Unity
 4) Modify any UI elements to fit your project
 5) Edit the Mono cs files so that it deserialises your data from your API
-6) Parse your data and modify any links to the Unity project
+6) Parse your data and modify any links to the Unity projectf
 
 
 
